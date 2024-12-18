@@ -5,14 +5,12 @@ k3s_cluster:
       hosts:
         box-vm-control-node:
           ansible_connection: local
-          connection: local
           vars:
             ansible_python_interpreter: "{{ansible_playbook_python}}"
     agent:
       hosts:
         box-vm-control-node:
           ansible_connection: local
-          connection: local
           vars:
             ansible_python_interpreter: "{{ansible_playbook_python}}"
         laptop-vm:
