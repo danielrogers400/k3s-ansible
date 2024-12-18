@@ -4,18 +4,20 @@ k3s_cluster:
     server:
       hosts:
         box-vm-control-node:
-          ansible_host: 127.0.0.1
+          ansible_connection: local
           connection: local
           vars:
             ansible_connection: local
+            connection: local
             ansible_python_interpreter: "{{ansible_playbook_python}}"
     agent:
       hosts:
         box-vm-control-node:
-          ansible_host: 127.0.0.1
+          ansible_connection: local
           connection: local
           vars:
             ansible_connection: local
+            connection: local
             ansible_python_interpreter: "{{ansible_playbook_python}}"
         laptop-vm:
           ansible_host: 192.168.0.212
